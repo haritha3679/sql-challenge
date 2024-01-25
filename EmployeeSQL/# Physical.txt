@@ -1,0 +1,38 @@
+# Physical
+
+Titles
+-
+emp_title INT PK
+title VARCHAR
+
+employees
+-
+emp_no INT PK
+emp_title VARCHAR FK - Titles.emp_title
+birth_date date
+first_name VARCHAR
+last_name varchar
+sex varchar
+hire_date date
+
+salaries
+-
+emp_no INT PK FK - employees.emp_no
+salary INT
+
+departments 
+-
+dept_no varchar PK
+detp_name varchar
+
+dept_manager
+-
+dept_no varchar PK FK - departments.dept_no
+emp_no INT PK FK >- employees.emp_no
+
+
+dept_employee
+-
+emp_no INT PK FK - employees.emp_no
+dep_no INT PK FK >- departments.dept_no
+
